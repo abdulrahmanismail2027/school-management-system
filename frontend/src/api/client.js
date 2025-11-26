@@ -12,12 +12,13 @@ class APIClient {
   }
 
   /**
-   * Make an HTTP request
-   * @param {string} endpoint - API endpoint (e.g., '/admin/users')
+   * Make an HTTP request with JWT auth
+   * @param {string} endpoint - API endpoint (e.g., '/auth/login')
    * @param {string} method - HTTP method (GET, POST, PUT, DELETE, PATCH)
    * @param {Object} body - Request body (optional, for POST/PUT/PATCH)
    * @param {Object} headers - Additional headers (optional)
    * @returns {Promise<any>} Response data
+   * @throws {Error} Backend error response
    */
   async request(endpoint, method = 'GET', body = null, headers = {}) {
     const url = `${this.baseURL}${endpoint}`;
@@ -48,10 +49,19 @@ class APIClient {
 
       clearTimeout(timeoutId);
 
-      return await this.handleResponse(response);
+      const contentType = response.headers.get('content-type');
+      const data = contentType?.includes('application/json') 
+        ? await response.json() 
+        : await response.text();
+
+      if (!response.ok) {
+        throw data; // Throw backend error response
+      }
+
+      return data;
     } catch (error) {
       clearTimeout(timeoutId);
-      throw this.handleError(error);
+      throw error; // Let the component handle it
     }
   }
 
@@ -115,50 +125,6 @@ class APIClient {
   getAuthHeaders() {
     const token = localStorage.getItem('authToken');
     return token ? { Authorization: `Bearer ${token}` } : {};
-  }
-
-  /**
-   * Handle successful response
-   * @param {Response} response - Fetch response object
-   * @returns {Promise<any>}
-   */
-  async handleResponse(response) {
-    const contentType = response.headers.get('content-type');
-    const isJson = contentType && contentType.includes('application/json');
-
-    const data = isJson ? await response.json() : await response.text();
-
-    if (!response.ok) {
-      const error = new Error(
-        data.message || `HTTP Error: ${response.status}`
-      );
-      error.status = response.status;
-      error.data = data;
-      throw error;
-    }
-
-    return data;
-  }
-
-  /**
-   * Handle request errors
-   * @param {Error} error - Error object
-   * @throws {Error}
-   */
-  handleError(error) {
-    if (error.name === 'AbortError') {
-      const timeoutError = new Error('Request timeout');
-      timeoutError.status = 'TIMEOUT';
-      throw timeoutError;
-    }
-
-    if (error instanceof TypeError) {
-      const networkError = new Error('Network error');
-      networkError.status = 'NETWORK_ERROR';
-      throw networkError;
-    }
-
-    throw error;
   }
 }
 
