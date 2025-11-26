@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="20bfe0b5-2594-4f65-883d-90b7ad782f66" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/target/classes/com/faithcentre/sms/SchoolManagementSystemApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/faithcentre/sms/SchoolManagementSystemApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/faithcentre/sms/config/ConfigPlaceholder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/faithcentre/sms/config/ConfigPlaceholder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/faithcentre/sms/controller/ControllerPlaceholder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/faithcentre/sms/controller/ControllerPlaceholder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/faithcentre/sms/controller/admin/AdminControllerPlaceholder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/faithcentre/sms/controller/admin/AdminControllerPlaceholder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/faithcentre/sms/controller/auth/AuthControllerPlaceholder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/faithcentre/sms/controller/auth/AuthControllerPlaceholder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/faithcentre/sms/controller/student/StudentControllerPlaceholder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/faithcentre/sms/controller/student/StudentControllerPlaceholder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/faithcentre/sms/controller/teacher/TeacherControllerPlaceholder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/faithcentre/sms/controller/teacher/TeacherControllerPlaceholder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/faithcentre/sms/controller/team/TeamControllerPlaceholder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/faithcentre/sms/controller/team/TeamControllerPlaceholder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/faithcentre/sms/dto/request/RequestDtoPlaceholder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/faithcentre/sms/dto/request/RequestDtoPlaceholder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/faithcentre/sms/dto/response/ResponseDtoPlaceholder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/faithcentre/sms/dto/response/ResponseDtoPlaceholder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/faithcentre/sms/entity/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/faithcentre/sms/entity/Admin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/faithcentre/sms/entity/StudentPhone.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/faithcentre/sms/entity/StudentPhone.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/faithcentre/sms/entity/Team.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/faithcentre/sms/entity/Team.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/faithcentre/sms/exception/BusinessLogicException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/faithcentre/sms/exception/BusinessLogicException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/faithcentre/sms/exception/ErrorResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/faithcentre/sms/exception/ErrorResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/faithcentre/sms/exception/ForbiddenAccessException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/faithcentre/sms/exception/ForbiddenAccessException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/faithcentre/sms/exception/GlobalExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/faithcentre/sms/exception/GlobalExceptionHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/faithcentre/sms/exception/ResourceNotFoundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/faithcentre/sms/exception/ResourceNotFoundException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/faithcentre/sms/exception/UnauthorizedException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/faithcentre/sms/exception/UnauthorizedException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/faithcentre/sms/repository/AdminRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/faithcentre/sms/repository/AdminRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/faithcentre/sms/repository/StudentPhoneRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/faithcentre/sms/repository/StudentPhoneRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/faithcentre/sms/repository/TeamRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/faithcentre/sms/repository/TeamRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/faithcentre/sms/service/ServicePlaceholder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/faithcentre/sms/service/ServicePlaceholder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/faithcentre/sms/service/impl/ServiceImplPlaceholder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/faithcentre/sms/service/impl/ServiceImplPlaceholder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/faithcentre/sms/util/UtilPlaceholder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/faithcentre/sms/util/UtilPlaceholder.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;AbdoElsayed796&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/abdulrahmanismail2027/school-management-system.git&quot;,
+    &quot;accountId&quot;: &quot;517ab8cb-1c38-44e1-b1ae-daf7807cc878&quot;
+  }
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="3605Sj66xWaxuvfQdZzsWVVgMcN" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.SchoolManagementSystemApplication.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Setup-Entities&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="20bfe0b5-2594-4f65-883d-90b7ad782f66" name="Changes" comment="" />
+      <created>1764130651290</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1764130651290</updated>
+    </task>
+    <servers />
+  </component>
+</project>

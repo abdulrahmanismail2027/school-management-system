@@ -1,1 +1,0 @@
-// Student components placeholder
