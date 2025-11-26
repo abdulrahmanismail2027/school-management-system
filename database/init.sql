@@ -22,6 +22,12 @@ DROP TABLE IF EXISTS admin;
 --     Checked BOOLEAN DEFAULT FALSE
 -- );
 
+-- Create Team table
+CREATE TABLE team (
+    team_id INT PRIMARY KEY AUTO_INCREMENT,
+    team_name VARCHAR(100) NOT NULL UNIQUE
+);
+
 -- Create Admin table
 CREATE TABLE admin (
     admin_id INT PRIMARY KEY AUTO_INCREMENT,
@@ -93,8 +99,8 @@ CREATE TABLE student (
 -- Create student_phone table
 CREATE TABLE student_phone (
 --     parent_id INT,
-    student_id INT,
-    phone_number VARCHAR(20) DEFAULT NULL,
+    student_id INT NOT NULL,
+    phone_number VARCHAR(20) NOT NULL,
 --     FOREIGN KEY (parent_id) REFERENCES parent(parent_id) ON UPDATE CASCADE ON DELETE CASCADE,
 	FOREIGN KEY (student_id) REFERENCES student(student_id) ON UPDATE CASCADE ON DELETE CASCADE,
     PRIMARY KEY (phone_number, student_id)
@@ -130,11 +136,6 @@ CREATE TABLE student_phone (
 --     FOREIGN KEY (ClassId) REFERENCES Class(ClassId) ON DELETE CASCADE
 -- );
 
--- Create Team table
-CREATE TABLE team (
-    team_id INT PRIMARY KEY AUTO_INCREMENT,
-    team_name VARCHAR(100) NOT NULL UNIQUE
-);
 
 -- Insert sample data for Hardcoded Admin
 INSERT INTO admin (first_name, last_name, email, password) 

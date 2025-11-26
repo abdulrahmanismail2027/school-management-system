@@ -1,0 +1,1 @@
+// Teacher components placeholder
