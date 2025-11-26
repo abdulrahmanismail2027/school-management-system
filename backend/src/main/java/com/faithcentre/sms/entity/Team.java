@@ -19,13 +19,10 @@ public class Team {
     @Column(nullable = false, unique = true, length = 100)
     private String teamName;
 
-    // Optional relationships
-    // @OneToMany(mappedBy = "team")
-    // private List<Teacher> teachers;
+     @OneToMany(mappedBy = "team")
+     private List<Teacher> teachers;
 
-    // @OneToMany(mappedBy = "team")
-    // private List<Student> students;
-
-    // Getters & Setters
+     @OneToMany(mappedBy = "team")
+     private List<Student> students;
 
 }

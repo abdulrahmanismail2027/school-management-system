@@ -81,7 +81,8 @@ CREATE TABLE teacher (
 -- Create Student table
 CREATE TABLE student (
     student_id INT PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(100) NOT NULL,
+    first_name VARCHAR(100) NOT NULL,
+	last_name VARCHAR(100) NOT NULL,
     age INT,
     team_id INT,
     enrolled_date DATE DEFAULT (CURRENT_DATE),
