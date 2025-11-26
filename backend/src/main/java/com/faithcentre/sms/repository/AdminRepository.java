@@ -1,4 +1,8 @@
 package com.faithcentre.sms.repository;
 
-public class AdminRepository {
+import com.faithcentre.sms.entity.Admin;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface AdminRepository extends JpaRepository<Admin, Integer> {
+    boolean existsByEmail(String email);
 }
