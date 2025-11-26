@@ -6,6 +6,7 @@ USE SMS;
 -- DROP TABLE IF EXISTS attendance;
 -- DROP TABLE IF EXISTS class;
 -- DROP TABLE IF EXISTS Schedule;
+DROP TABLE IF EXISTS user;
 DROP TABLE IF EXISTS student_phone;
 DROP TABLE IF EXISTS student;
 DROP TABLE IF EXISTS teacher;
@@ -28,15 +29,22 @@ CREATE TABLE team (
     team_name VARCHAR(100) NOT NULL UNIQUE
 );
 
--- Create Admin table
-CREATE TABLE admin (
-    admin_id INT PRIMARY KEY AUTO_INCREMENT,
+-- Create user table
+CREATE TABLE user (
+    user_id INT PRIMARY KEY AUTO_INCREMENT,
+    role ENUM('ADMIN', 'TEACHER') NOT NULL,
 	first_name VARCHAR(100) NOT NULL,
 	last_name VARCHAR(100) NOT NULL,
     UNIQUE(first_name,last_name),
     email VARCHAR(100) UNIQUE NOT NULL,
     password VARCHAR(255) NOT NULL,
     since DATE DEFAULT (CURRENT_DATE)
+);
+
+-- Create Admin table
+CREATE TABLE admin (
+    admin_id INT PRIMARY KEY,
+    FOREIGN KEY (admin_id) REFERENCES user(user_id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 -- -- Create Teacher_Summary table
@@ -54,14 +62,9 @@ CREATE TABLE admin (
 
 -- Create Teacher table
 CREATE TABLE teacher (
-    teacher_id INT PRIMARY KEY AUTO_INCREMENT,
-	first_name VARCHAR(100) NOT NULL,
-	last_name VARCHAR(100) NOT NULL,
-    UNIQUE(first_name,last_name),
-    email VARCHAR(100) UNIQUE NOT NULL,
-    password VARCHAR(255) NOT NULL,
-    since DATE DEFAULT (CURRENT_DATE),
-	team_id INT,
+    teacher_id INT PRIMARY KEY,
+    team_id INT,
+    FOREIGN KEY (teacher_id) REFERENCES user(user_id) ON DELETE CASCADE ON UPDATE CASCADE,
     FOREIGN KEY (team_id) REFERENCES team(team_id) ON DELETE SET NULL ON UPDATE CASCADE
 );
 
@@ -81,7 +84,8 @@ CREATE TABLE teacher (
 -- Create Student table
 CREATE TABLE student (
     student_id INT PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(100) NOT NULL,
+    first_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100) NOT NULL,
     age INT,
     team_id INT,
     enrolled_date DATE DEFAULT (CURRENT_DATE),
@@ -138,5 +142,5 @@ CREATE TABLE student_phone (
 
 
 -- Insert sample data for Hardcoded Admin
-INSERT INTO admin (first_name, last_name, email, password) 
-VALUES ('System', 'Admin', 'admin@school.com', 'password');
+INSERT INTO user (first_name, last_name, role, email, password) 
+VALUES ('System', 'Admin', 'ADMIN', 'admin@school.com', '{bycrpt}$2a$12$ExFHTtJvsb5T9YiFQPPjN.E4s3Z2x95BAOLkRORE/5dbk3RAlVsnq');
